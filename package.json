@@ -1,0 +1,18 @@
+{
+  "name": "smartspend-ai-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "build:client": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview",
+    "install:all": "npm --prefix client install && npm --prefix server install"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "vite": "^8.3.4"
+  }
+}
